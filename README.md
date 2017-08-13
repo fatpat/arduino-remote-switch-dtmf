@@ -11,47 +11,54 @@
  
 = SCHEMATICS =
 
-== SPEAKER SCHEMATICS ==
+== SPEAKER ==
 
-Ref: ![](https://i.stack.imgur.com/XZddX.jpg "Kenwood double jack pinout")
+=== Kenwwod double jack pinout ===
+![](https://i.stack.imgur.com/XZddX.jpg "Kenwood double jack pinout")
 
-    ┌=sleeve=|=ring=|=tip=
-    │
-    ├[SPRK-]-|-ring-|-[SPRK+]-
-    |
+=== Schematics ===
+
+    ╔═══[sleeve]══╬══[ring]══╬══[tip]══╡
+    ║
+    ║
+    ╟─[SPRK-]─┼─[ring]─┼─[SPRK+]─┤
+    ║
+    ║
 
 
 
-    [VCC=5V+]------┐
+    [VCC=5V+]──────┐
                    │
                  [R1=1k]
                    │
-    SPK+ ----------┼----[ARDUINO A0]
+    [SPK+]─────────┼──[ARDUINO A0]
                    │
                  [R2=1k]
                    │
-    SPK- ----------┤
+    [SPK-]─────────┤
                    │
-    [GND]----------┘
+    [GND]──────────┘
              
             
-== RELAY SCHEMATICS ==
+== RELAY ==
+Using 2x5m led strip controlled by a IRF540 MOSFET though ARDUINO PWM output
 
-    [VBAT+]----------┐
-                     │+
-                   [LED]
-                     │-
-    [IRF540: DRAIN]--┘
-                     -[IFR540: GATE]┬-[R=1k]-----[ARDUINO D11]
-    [IRF540: SOURCE]-┐              │
-                     │             [R=10k]
-    [VBAT-]----------┤              │
-    [GND]------------┴--------------┘
+    [VBAT+]──────────┬───────────────┐
+                     │+              │+
+                 [LED STRIP1]  [LED STRIP 2]
+                     │-              │-
+    [IRF540: DRAIN]──┴───────────────┘ 
+                     X─[IFR540: GATE]─┬─[R=1k]──[ARDUINO D11]
+    [IRF540: SOURCE]─┐                │
+                     │              [R=10k]
+    [VBAT-]──────────┤                │
+    [GND]────────────┴────────────────┘
 
  
-== ARDUINO SCHEMATICS ==
+== ARDUINO ==
+Using Arduino Nano with a 3S Lipo battery
 
-    [ARDUINO GND]---------[VBAT-]
-    [ARDUINO VIN]---------[VBAT+]
-    [ARDUINO A0]----------[SPK+]
-    [ARDUINO D11]---------[R=1k]--[IFR540: GATE]
+    [ARDUINO GND]─────────[VBAT-]
+    [ARDUINO VIN]─────────[VBAT+]
+    [ARDUINO A0]──────────[SPK+]
+    [ARDUINO D11]─────────[R=1k]──[IFR540: GATE]

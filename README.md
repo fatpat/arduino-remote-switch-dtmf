@@ -13,7 +13,7 @@
 
 == SPEAKER SCHEMATICS ==
 
-Ref: !(https://i.stack.imgur.com/XZddX.jpg "Kenwood double jack pinout")
+Ref: ![](https://i.stack.imgur.com/XZddX.jpg "Kenwood double jack pinout")
 
     ┌=sleeve=|=ring=|=tip=
     │

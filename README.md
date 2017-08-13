@@ -10,8 +10,10 @@
  - After 5 minutes being UP the relay is shutdown
  
 = SCHEMATICS =
+
 == SPEAKER SCHEMATICS ==
-Ref: https://i.stack.imgur.com/XZddX.jpg
+
+Ref: [https://i.stack.imgur.com/XZddX.jpg]
 
     ┌=sleeve=|=ring=|=tip=
     │

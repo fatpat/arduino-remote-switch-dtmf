@@ -12,10 +12,10 @@
 = SCHEMATICS =
 == SPEAKER SCHEMATICS ==
 Ref: https://i.stack.imgur.com/XZddX.jpg
-┌=sleeve=|=ring=|=tip=
-│
-├[SPRK-]-|-ring-|-[SPRK+]-
-|
+> ┌=sleeve=|=ring=|=tip=
+> │
+> ├[SPRK-]-|-ring-|-[SPRK+]-
+> |
 
 
 

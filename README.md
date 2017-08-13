@@ -12,6 +12,7 @@
 = SCHEMATICS =
 == SPEAKER SCHEMATICS ==
 Ref: https://i.stack.imgur.com/XZddX.jpg
+
     ┌=sleeve=|=ring=|=tip=
     │
     ├[SPRK-]-|-ring-|-[SPRK+]-
@@ -19,36 +20,36 @@ Ref: https://i.stack.imgur.com/XZddX.jpg
 
 
 
-[VCC=5V+]------┐
-               │
-             [R1=1k]
-               │
-SPK+ ----------┼----[ARDUINO A0]
-               │
-             [R2=1k]
-               │
-SPK- ----------┤
-               │
-[GND]----------┘
+    [VCC=5V+]------┐
+                   │
+                 [R1=1k]
+                   │
+    SPK+ ----------┼----[ARDUINO A0]
+                   │
+                 [R2=1k]
+                   │
+    SPK- ----------┤
+                   │
+    [GND]----------┘
              
             
 == RELAY SCHEMATICS ==
 
-[VBAT+]----------┐
-                 │+
-               [LED]
-                 │-
-[IRF540: DRAIN]--┘
-                 -[IFR540: GATE]┬-[R=1k]-----[ARDUINO D11]
-[IRF540: SOURCE]-┐              │
-                 │             [R=10k]
-[VBAT-]----------┤              │
-[GND]------------┴--------------┘
+    [VBAT+]----------┐
+                     │+
+                   [LED]
+                     │-
+    [IRF540: DRAIN]--┘
+                     -[IFR540: GATE]┬-[R=1k]-----[ARDUINO D11]
+    [IRF540: SOURCE]-┐              │
+                     │             [R=10k]
+    [VBAT-]----------┤              │
+    [GND]------------┴--------------┘
 
  
 == ARDUINO SCHEMATICS ==
 
-[ARDUINO GND]---------[VBAT-]
-[ARDUINO VIN]---------[VBAT+]
-[ARDUINO A0]----------[SPK+]
-[ARDUINO D11]---------[R=1k]--[IFR540: GATE]
+    [ARDUINO GND]---------[VBAT-]
+    [ARDUINO VIN]---------[VBAT+]
+    [ARDUINO A0]----------[SPK+]
+    [ARDUINO D11]---------[R=1k]--[IFR540: GATE]
